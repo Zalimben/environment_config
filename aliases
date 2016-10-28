@@ -113,9 +113,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#
+#-------------------------------------------------------------
 # Personal Aliases
-#
+#-------------------------------------------------------------
 
 alias du='du -kh'    # Makes a more readable output.
 alias df='df -kTh'
@@ -131,28 +131,77 @@ alias lt='ls -ltr'         #  Sort by date, most recent last.
 alias lc='ls -ltcr'        #  Sort by/show change time,most recent last.
 alias lu='ls -ltur'        #  Sort by/show access time,most recent last.
 
+#-------------------------------------------------------------
 # The ubiquitous 'll': directories first, with alphanumeric sorting:
+#-------------------------------------------------------------
 alias ll="ls -lv --group-directories-first"
 alias lm='ll |more'        #  Pipe through 'more'
 alias lr='ll -R'           #  Recursive ls.
 alias la='ll -A'           #  Show hidden files.
 alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 
+#-------------------------------------------------------------
+# Navifation
+#-------------------------------------------------------------
+# Custom
 alias natura='cd ~/natura/elumencloud'
 alias tesis='cd ~/tesis'
+alias mysqlnat='mysql -uelumen -pelumen'
 
-# Git alias
-alias gs='git status'
-alias gf='git fetch'
-alias ggh='git log --graph'
-alias gno='git log --name-only'
-alias gd='git diff'
-
-# Navigation
+# System
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
+
+#-------------------------------------------------------------
+# Git 
+#-------------------------------------------------------------
+alias gs='git status'
+alias gf='git fetch'
+alias ggh='git log --graph'
+alias gno='git log --name-only'
+alias gd='git diff'
+alias gkk='gitk &'
+
+
+#-------------------------------------------------------------
+# System
+#-------------------------------------------------------------
+alias psg='ps aux | grep -v grep | grep -i -e VSZ -e'
+
+function extract {
+ if [ -z "$1" ]; then
+    # display usage if no parameters given
+    echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
+ else
+    if [ -f $1 ] ; then
+        # NAME=${1%.*}
+        # mkdir $NAME && cd $NAME
+        case $1 in
+          *.tar.bz2)   tar xvjf ../$1    ;;
+          *.tar.gz)    tar xvzf ../$1    ;;
+          *.tar.xz)    tar xvJf ../$1    ;;
+          *.lzma)      unlzma ../$1      ;;
+          *.bz2)       bunzip2 ../$1     ;;
+          *.rar)       unrar x -ad ../$1 ;;
+          *.gz)        gunzip ../$1      ;;
+          *.tar)       tar xvf ../$1     ;;
+          *.tbz2)      tar xvjf ../$1    ;;
+          *.tgz)       tar xvzf ../$1    ;;
+          *.zip)       unzip ../$1       ;;
+          *.Z)         uncompress ../$1  ;;
+          *.7z)        7z x ../$1        ;;
+          *.xz)        unxz ../$1        ;;
+          *.exe)       cabextract ../$1  ;;
+          *)           echo "extract: '$1' - unknown archive method" ;;
+        esac
+    else
+        echo "$1 - file does not exist"
+    fi
+fi
+}
+
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

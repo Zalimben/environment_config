@@ -28,10 +28,16 @@ alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 #-------------------------------------------------------------
 # Navigation
 #-------------------------------------------------------------
-# Custom
+# Work
+
 alias natura='cd ~/natura/elumencloud'
-alias tesis='cd ~/tesis'
+alias domain='cd ~/natura/elumencloud/src/main/java/com/elumen/services/curriculum/domain'
+alias services='cd ~natura/elumen-services'
 alias mynat='mysql -uelumen -pelumen'
+
+# Personal
+alias tesis='cd ~/tesis'
+alias args='cd ~/args'
 
 # System
 alias ..='cd ..'
@@ -44,7 +50,8 @@ alias .5='cd ../../../../..'
 # Git 
 #-------------------------------------------------------------
 alias gs='git status'
-alias gf='git fetch --all'
+alias gf='git fetch'
+alias gfa='git fetch --all'
 alias ggh='git log --graph'
 alias gno='git log --name-only'
 alias gd='git diff'

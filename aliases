@@ -29,11 +29,12 @@ alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 # Navigation
 #-------------------------------------------------------------
 # Work
-
 alias natura='cd ~/natura/elumencloud'
 alias domain='cd ~/natura/elumencloud/src/main/java/com/elumen/services/curriculum/domain'
-alias services='cd ~natura/elumen-services'
+alias services='cd ~/natura/elumen-services'
+alias catalog='cd ~/natura/elumen-catalog'
 alias mynat='mysql -uelumen -pelumen'
+alias sonar='mvn sonar:sonar -Dsonar.host.url=http:sonar.swnat:9000 -Dsonar.languaje=java -Dsonar.java.binaries=./target/classes -Dsonar.projectVersion=$(git describe) -Dsonar.projectName=eLumen -Dsonar.projectKey=elumen:e65-at -Dsonar.analysis.mode=preview -Dsonar.sourceEncoding=UTF-8 -Dsonar.issuesReport.console.enable=false -Dsonar.issuesReport.html.enable=true'
 
 # Personal
 alias tesis='cd ~/tesis'
@@ -53,19 +54,21 @@ alias gs='git status'
 alias gf='git fetch'
 alias gfa='git fetch --all'
 alias ggh='git log --graph'
+alias ggp="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all"
 alias gno='git log --name-only'
 alias gd='git diff'
 alias gkk='gitk &'
 alias glp='git log -p'
-alias gts='git stash list'
+alias gtl='git stash list'
 
+# Functions
 function git-compare {
   if [ -z "$1" ]; then
     # display usage if no parameters given
     echo "Usage: git-compare origin/branchA...origin/branchB"
   else 
-    echo "Comparing '$1'"
-    git log --oneline --grep "Merge pull req" $1
+  	echo "Comparing '$1'"
+  	git log --oneline --grep "Merge pull req" $1
   fi
 }
 
@@ -76,8 +79,13 @@ function git-compare {
 alias psg='ps aux | grep -v grep | grep -i -e VSZ -e'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
+alias dualDisplay='~/./.screenlayout/dualDisplay.sh'
+alias oneDisplay='~/./.screenlayout/oneDisplay.sh'
 
+alias shoot-windows='xfce4-screenshooter -w -s $HOME/Screenshooter/'
+alias shoot-region='xfce4-screenshooter -r -s $HOME/Screenshooter/'
 
+# Functions
 function extract {
  if [ -z "$1" ]; then
     # display usage if no parameters given

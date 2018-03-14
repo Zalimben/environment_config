@@ -15,7 +15,7 @@ alias lk='ls -lSr'         #  Sort by size, biggest last.
 alias lt='ls -ltr'         #  Sort by date, most recent last.
 alias lc='ls -ltcr'        #  Sort by/show change time,most recent last.
 alias lu='ls -ltur'        #  Sort by/show access time,most recent last.
-
+alias tree='tree -C'       #  Nice alternative to 'recursive ls' ...
 #-------------------------------------------------------------
 # The ubiquitous 'll': directories first, with alphanumeric sorting:
 #-------------------------------------------------------------
@@ -23,22 +23,10 @@ alias ll="ls -lv --group-directories-first"
 alias lm='ll |more'        #  Pipe through 'more'
 alias lr='ll -R'           #  Recursive ls.
 alias la='ll -A'           #  Show hidden files.
-alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 
 #-------------------------------------------------------------
 # Navigation
 #-------------------------------------------------------------
-# Work
-alias natura='cd ~/natura/elumencloud'
-alias domain='cd ~/natura/elumencloud/src/main/java/com/elumen/services/curriculum/domain'
-alias services='cd ~/natura/elumen-services'
-alias catalog='cd ~/natura/elumen-catalog'
-alias mynat='mysql -uelumen -pelumen'
-alias sonar='mvn sonar:sonar -Dsonar.host.url=http:sonar.swnat:9000 -Dsonar.languaje=java -Dsonar.java.binaries=./target/classes -Dsonar.projectVersion=$(git describe) -Dsonar.projectName=eLumen -Dsonar.projectKey=elumen:e65-at -Dsonar.analysis.mode=preview -Dsonar.sourceEncoding=UTF-8 -Dsonar.issuesReport.console.enable=false -Dsonar.issuesReport.html.enable=true'
-
-# Personal
-alias tesis='cd ~/tesis'
-alias args='cd ~/args'
 
 # System
 alias ..='cd ..'
@@ -51,6 +39,8 @@ alias .5='cd ../../../../..'
 # Git 
 #-------------------------------------------------------------
 alias gs='git status'
+alias gss='git submodule status'
+alias gsu='git submodule update'
 alias gf='git fetch'
 alias gfa='git fetch --all'
 alias ggh='git log --graph'
@@ -67,8 +57,8 @@ function git-compare {
     # display usage if no parameters given
     echo "Usage: git-compare origin/branchA...origin/branchB"
   else 
-  	echo "Comparing '$1'"
-  	git log --oneline --grep "Merge pull req" $1
+    echo "Comparing '$1'"
+    git log --oneline --grep "Merge pull req" $1
   fi
 }
 
@@ -79,8 +69,6 @@ function git-compare {
 alias psg='ps aux | grep -v grep | grep -i -e VSZ -e'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
-alias dualDisplay='~/./.screenlayout/dualDisplay.sh'
-alias oneDisplay='~/./.screenlayout/oneDisplay.sh'
 
 alias shoot-windows='xfce4-screenshooter -w -s $HOME/Screenshooter/'
 alias shoot-region='xfce4-screenshooter -r -s $HOME/Screenshooter/'

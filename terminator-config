@@ -1,0 +1,315 @@
+[global_config]
+  always_split_with_profile = True
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  suppress_multiple_term_dialog = True
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 790eb00b-5c80-428b-b226-b0c1d5e0a209
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 590:288
+      size = 734, 454
+      title = Zalimben
+      type = Window
+    [[[terminal1]]]
+      order = 0
+      parent = child0
+      profile = default
+      type = Terminal
+      uuid = 790eb00b-5c80-428b-b226-b0c1d5e0a209
+  [[devel]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 8171acf9-be53-40a9-a95b-7e5051998825
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 0:31
+      size = 1920, 971
+      title = Zalimben
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 961
+      ratio = 0.500520833333
+      type = HPaned
+    [[[child3]]]
+      order = 1
+      parent = child1
+      position = 486
+      ratio = 0.500514933059
+      type = VPaned
+    [[[terminal2]]]
+      command = ""
+      order = 0
+      parent = child1
+      profile = devel
+      title = main
+      type = Terminal
+      uuid = 8171acf9-be53-40a9-a95b-7e5051998825
+    [[[terminal4]]]
+      command = ""
+      order = 0
+      parent = child3
+      profile = devel
+      title = aux
+      type = Terminal
+      uuid = e79be880-6cb0-4150-aee5-be17219ae3b4
+    [[[terminal5]]]
+      command = htop
+      order = 1
+      parent = child3
+      profile = devel
+      title = monitor
+      type = Terminal
+      uuid = 6dd60366-44e6-4efc-a67a-aebd857169ec
+  [[micro]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 790eb00b-5c80-428b-b226-b0c1d5e0a209
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 0:31
+      size = 1920, 971
+      title = Zalimben
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 486
+      ratio = 0.500514933059
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 960
+      ratio = 0.5
+      type = HPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 643
+      ratio = 0.334895833333
+      type = HPaned
+    [[[child7]]]
+      order = 1
+      parent = child5
+      position = 638
+      ratio = 0.5
+      type = HPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = devel
+      type = Terminal
+      uuid = 790eb00b-5c80-428b-b226-b0c1d5e0a209
+    [[[terminal4]]]
+      command = ""
+      order = 1
+      parent = child2
+      profile = devel
+      type = Terminal
+      uuid = f97297b3-6dfd-447b-bf20-a810686096f1
+    [[[terminal6]]]
+      directory = ""
+      order = 0
+      parent = child5
+      profile = devel
+      type = Terminal
+      uuid = 88e3fe35-83fc-4dff-abdb-4172d333bd1f
+    [[[terminal8]]]
+      order = 0
+      parent = child7
+      profile = devel
+      type = Terminal
+      uuid = 3911cfe2-594f-41ea-bda8-2e10fe10c7e5
+    [[[terminal9]]]
+      order = 1
+      parent = child7
+      profile = devel
+      type = Terminal
+      uuid = 1fce1868-cc18-4b87-b78f-88379f2ebe3d
+  [[parrot]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 0b34ca40-6d7b-4f7e-828b-1914f4eb9027
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 0:31
+      size = 1920, 971
+      title = szalimben@szalimben: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 960
+      ratio = 0.5
+      type = HPaned
+    [[[child3]]]
+      order = 1
+      parent = child1
+      position = 486
+      ratio = 0.500514933059
+      type = VPaned
+    [[[child4]]]
+      order = 0
+      parent = child3
+      position = 480
+      ratio = 0.500521376434
+      type = HPaned
+    [[[terminal2]]]
+      order = 0
+      parent = child1
+      profile = devel
+      type = Terminal
+      uuid = 0b34ca40-6d7b-4f7e-828b-1914f4eb9027
+    [[[terminal5]]]
+      order = 0
+      parent = child4
+      profile = devel
+      type = Terminal
+      uuid = ffe19577-a918-4af4-9066-127cd1bdc32d
+    [[[terminal6]]]
+      order = 1
+      parent = child4
+      profile = devel
+      type = Terminal
+      uuid = ae1e76cc-af91-4ded-b856-a46dfc166e36
+    [[[terminal7]]]
+      order = 1
+      parent = child3
+      profile = devel
+      type = Terminal
+      uuid = fe2802fe-85c5-4a83-aa11-a4ca4f3c75e5
+  [[parrots]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 8171acf9-be53-40a9-a95b-7e5051998825
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 0:31
+      size = 1920, 971
+      title = Zalimben
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 961
+      ratio = 0.500520833333
+      type = HPaned
+    [[[child10]]]
+      order = 0
+      parent = child9
+      position = 479
+      ratio = 0.5
+      type = HPaned
+    [[[child13]]]
+      order = 1
+      parent = child9
+      position = 479
+      ratio = 0.5
+      type = HPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 486
+      ratio = 0.500514933059
+      type = VPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 481
+      ratio = 0.500520291363
+      type = HPaned
+    [[[child6]]]
+      order = 1
+      parent = child2
+      position = 481
+      ratio = 0.500520291363
+      type = HPaned
+    [[[child9]]]
+      order = 1
+      parent = child1
+      position = 486
+      ratio = 0.500514933059
+      type = VPaned
+    [[[terminal11]]]
+      command = curl parrot.live
+      order = 0
+      parent = child10
+      profile = devel
+      title = aux
+      type = Terminal
+      uuid = e79be880-6cb0-4150-aee5-be17219ae3b4
+    [[[terminal12]]]
+      command = curl parrot.live
+      order = 1
+      parent = child10
+      profile = devel
+      type = Terminal
+      uuid = 0aa30a9c-8b93-4124-827f-39029b641d9f
+    [[[terminal14]]]
+      command = curl parrot.live
+      order = 0
+      parent = child13
+      profile = devel
+      title = monitor
+      type = Terminal
+      uuid = 6dd60366-44e6-4efc-a67a-aebd857169ec
+    [[[terminal15]]]
+      command = curl parrot.live
+      order = 1
+      parent = child13
+      profile = devel
+      type = Terminal
+      uuid = 03c9c615-4105-44d4-93b9-135493837173
+    [[[terminal4]]]
+      command = curl parrot.live
+      order = 0
+      parent = child3
+      profile = devel
+      title = main
+      type = Terminal
+      uuid = 8171acf9-be53-40a9-a95b-7e5051998825
+    [[[terminal5]]]
+      command = curl parrot.live
+      order = 1
+      parent = child3
+      profile = devel
+      type = Terminal
+      uuid = ce0119a1-d193-4c94-8487-ba296cd01307
+    [[[terminal7]]]
+      command = curl parrot.live
+      order = 0
+      parent = child6
+      profile = devel
+      type = Terminal
+      uuid = bbbbd5fc-f1c8-468b-a17f-73da18de5228
+    [[[terminal8]]]
+      command = curl parrot.live
+      order = 1
+      parent = child6
+      profile = devel
+      type = Terminal
+      uuid = 0be240ce-1d94-4252-92c4-583212ce221a
+[plugins]
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+  [[devel]]
+    cursor_color = "#3465a4"
+    cursor_color_fg = False
+    foreground_color = "#8ae234"

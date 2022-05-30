@@ -1,8 +1,8 @@
 #                Header (up to 50)              #
-<issue|type>: <title>
- 
+# <issue|type>: <title>
+
+
 #                Body (up to 72)                                       #
-<description>
  
 
 # Description of changes. Answer the following questions:

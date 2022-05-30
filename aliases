@@ -58,12 +58,18 @@ alias gml='git log --oneline --grep "Merge " '
 
 # Functions
 function git-compare {
-  if [ -z "$1" ]; then
+  if [ -z "$2" ]; then
     # display usage if no parameters given
-    echo "Usage: git-compare origin/branchA...origin/branchB"
+    echo "Missing params"
+    echo "Usage: git-compare branchA branchB"
   else 
-    echo "Comparing '$1'"
-    git log --oneline --grep "Merge " $1
+    branchA="origin/$1"
+    branchB="origin/$2"
+    comparing="$branchB..$branchA"
+    echo "Commits in '$branchA' and not in '$branchB'"
+    echo "Comparing: $comparing"
+    echo ""
+    git log --oneline --grep "Merge " "$comparing"
   fi
 }
 

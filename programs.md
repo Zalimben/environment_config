@@ -4,6 +4,7 @@
 ### terminator 
 ```shell
 sudo apt-cache policy terminator
+sudo apt install terminator 
 
 ```
 ### chromium  

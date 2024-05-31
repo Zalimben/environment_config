@@ -146,7 +146,7 @@ alias shoot-windows='xfce4-screenshooter -w -s $HOME/Screenshooter/'
 alias shoot-region='xfce4-screenshooter -r -s $HOME/Screenshooter/'
 
 alias running-services='sudo systemctl list-unit-files --type service --all'
-
+alias osVersion='lsb_release -a'
 # Functions
 # Description:
 #   Extract files from compacted files.
